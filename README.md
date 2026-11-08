@@ -180,7 +180,7 @@ It does **not** implement shrinking regions (`LEAVE` / `IMPLODE`), the alternati
 ## Reproduction notes and limitations
 
 - The implemented Stim noise configuration is from the same general circuit-level family as the paper's model, but it is **not identical**. In particular, Stim's after-Clifford depolarisation also affects single-qubit Clifford gates, and before-round data depolarisation is not enabled.
-- The benchmark uses PyMatching 2.4.0 and the tested distance range is smaller than the paper's large-distance experiments. Hardware details for this run were not recorded.
+- The benchmark uses PyMatching 2.4.0 and the tested distance range is smaller than the paper's large-distance experiments.
 - Timing covers `decode_batch()` and excludes circuit generation, DEM extraction, and sampling. Treat the reported throughput and scaling as measurements of this setup, not as direct performance comparisons with the paper.
 - The paper's speed-up comparisons against PyMatching v0.7 and a NetworkX-based decoder, its threshold estimate, and its large-distance throughput claims were not reproduced.
 
